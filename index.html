@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="أدواتي الذكية: أدوات مجانية للصور والنصوص والحسابات وأدوات الذكاء الاصطناعي.">
+<title>أدواتي الذكية — أدوات مجانية</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#182238;--muted:#65718a;--blue:#245fe8;--blue2:#eaf0ff;--line:#e0e6f0;--green:#157347}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.65}
+header{background:linear-gradient(125deg,#142f78,#286df0);color:#fff;padding:25px 16px 35px}.wrap{width:min(1080px,100% - 28px);margin:auto}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.brand{font-size:1.3rem;font-weight:800}.pill{font-size:.8rem;border:1px solid #ffffff55;background:#ffffff18;border-radius:30px;padding:4px 11px}
+h1{font-size:clamp(1.7rem,4vw,2.5rem);margin:25px 0 4px}.lead{color:#e6edff;margin:0;max-width:700px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}nav a{color:#fff;text-decoration:none;border:1px solid #ffffff66;border-radius:10px;padding:7px 12px;font-size:.92rem}nav a:hover{background:#ffffff22}
+main{padding:24px 0 40px}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 0 14px}.sectionhead h2{font-size:1.35rem;margin:0}.muted{color:var(--muted);font-size:.91rem;margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 8px 25px #18223808}.card h3{font-size:1.12rem;margin:0 0 4px}.desc{margin:0 0 13px;color:var(--muted);font-size:.9rem}
+label{display:block;font-weight:700;font-size:.9rem;margin:10px 0 5px}input,textarea,select{font:inherit;width:100%;padding:10px 11px;border:1px solid #ccd5e4;border-radius:10px;background:#fff;color:var(--ink)}textarea{min-height:108px;resize:vertical}
+button,.btn{font:inherit;border:0;border-radius:10px;padding:10px 14px;background:var(--blue);color:white;font-weight:700;cursor:pointer;margin-top:9px;display:inline-block;text-decoration:none}button.secondary{background:var(--blue2);color:#214db7}button.light{background:#eef2f7;color:#24324b}button:disabled{opacity:.5;cursor:not-allowed}
+.result{background:#f3f6ff;border:1px solid #dce5ff;border-radius:10px;padding:10px 12px;margin-top:11px;overflow-wrap:anywhere;min-height:43px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.toolicon{font-size:1.4rem;margin-bottom:3px}.notice{border:1px solid #f0dca7;background:#fff8e4;border-radius:12px;padding:12px 14px;margin:0 0 18px;font-size:.9rem}.small{font-size:.82rem;color:var(--muted)}.filebox{padding:10px;border:1px dashed #aebbd0;border-radius:10px;background:#fbfcff}
+.preview{max-width:100%;max-height:240px;display:block;margin-top:10px;border-radius:10px}.stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.stat{background:#f0f4fb;border-radius:8px;padding:5px 9px;font-size:.85rem}
+footer{text-align:center;color:var(--muted);border-top:1px solid var(--line);padding:18px;font-size:.88rem}
+@media(max-width:430px){.row{grid-template-columns:1fr}.card{padding:15px}}
+</style></head>
+<body>
+<header><div class="wrap">
+<div class="top"><div class="brand">✦ أدواتي الذكية</div><div class="pill">مجاني • عربي • سهل</div></div>
+<h1>كل أدواتك الرقمية في مكان واحد</h1><p class="lead">أدوات عملية للصور والنصوص والحسابات. تعمل الأدوات المحلية داخل متصفحك ولا تحتاج إلى تسجيل دخول.</p>
+<nav><a href="#images">أدوات الصور</a><a href="#texttools">أدوات النصوص</a><a href="#calculators">الحاسبات</a><a href="#ai">أدوات الذكاء الاصطناعي</a></nav>
+</div></header>
+<main class="wrap">
+<div class="notice"><b>معلومة:</b> أدوات الصور والنصوص والحسابات تعمل على جهازك. أدوات الذكاء الاصطناعي هنا عبارة عن قوالب جاهزة لنسخ الطلبات؛ تشغيل ذكاء اصطناعي داخل الموقع نفسه يحتاج لاحقًا إلى خدمة API وقد تكون مدفوعة.</div>
+<section id="images">
+<div class="sectionhead"><h2>🖼️ أدوات الصور</h2><p class="muted">اختر صورة من جهازك لتغيير حجمها أو ضغطها.</p></div>
+<div class="grid">
+<article class="card"><div class="toolicon">📉</div><h3>ضغط الصورة وتغيير حجمها</h3><p class="desc">تصدير الصورة بصيغة JPG أو PNG أو WebP. تتم المعالجة في المتصفح.</p>
+<label for="imageFile">اختر صورة</label><input id="imageFile" type="file" accept="image/*">
+<div id="imageOptions" hidden><div class="row"><div><label for="imgWidth">العرض بالبكسل</label><input id="imgWidth" type="number" min="1" max="6000" placeholder="العرض الأصلي"></div><div><label for="imgQuality">جودة الضغط: <span id="qualityLabel">75%</span></label><input id="imgQuality" type="range" min="10" max="100" value="75"></div></div>
+<label for="imgFormat">صيغة التصدير</label><select id="imgFormat"><option value="image/webp">WebP — حجم أصغر غالبًا</option><option value="image/jpeg">JPG</option><option value="image/png">PNG — قد لا يقل الحجم</option></select>
+<button onclick="processImage()">معالجة الصورة</button><div id="imageResult" class="result" aria-live="polite">ستظهر النتيجة هنا.</div><img id="preview" class="preview" alt="معاينة الصورة" hidden><a id="downloadImage" class="btn" hidden download="adawati-image.webp">تنزيل الصورة</a></div>
+<p class="small">تنبيه: لا ترفع صورًا خاصة إلى مواقع غير موثوقة. هذه الأداة تعالج الصورة محليًا.</p></article>
+<article class="card"><div class="toolicon">ℹ️</div><h3>معلومة عن الصور</h3><p class="desc">بعد اختيار الصورة، ستظهر أبعادها وحجمها الأصلي. جرّب صيغة WebP وجودة 75% لتقليل الحجم.</p><div id="imageInfo" class="result">لم تختر صورة بعد.</div><p class="small">ملاحظة: تحويل PNG إلى JPG قد يزيل الشفافية، لذلك اختر PNG إذا أردت الحفاظ عليها.</p></article>
+</div></section>
+<section id="texttools" style="margin-top:30px">
+<div class="sectionhead"><h2>✍️ أدوات النصوص</h2><p class="muted">انسخ النص أو عدّله مباشرة.</p></div>
+<div class="grid">
+<article class="card"><div class="toolicon">🔢</div><h3>عدّ الكلمات والحروف</h3><p class="desc">مفيد للمقالات والواجبات والمنشورات.</p><label for="textInput">النص</label><textarea id="textInput" placeholder="اكتب أو الصق النص هنا..." oninput="countText()"></textarea><div id="textResult" class="result">الكلمات: 0 | الحروف: 0</div></article>
+<article class="card"><div class="toolicon">🧹</div><h3>تنظيف وتنسيق النص</h3><p class="desc">إزالة المسافات الزائدة والأسطر الفارغة المتكررة.</p><label for="cleanInput">النص المراد تنسيقه</label><textarea id="cleanInput" placeholder="ألصق النص هنا..."></textarea><button onclick="cleanText()">تنسيق النص</button><button class="secondary" onclick="copyClean()">نسخ النص</button><div id="cleanResult" class="result">ستظهر النتيجة هنا.</div></article>
+</div></section>
+<section id="calculators" style="margin-top:30px">
+<div class="sectionhead"><h2>🧮 الحاسبات والتحويل</h2><p class="muted">عمليات سريعة دون تثبيت تطبيقات.</p></div>
+<div class="grid">
+<article class="card"><h3>الحاسبة</h3><p class="desc">جمع وطرح وضرب وقسمة.</p><div class="row"><div><label for="num1">الرقم الأول</label><input id="num1" type="number" inputmode="decimal" placeholder="مثال: 125"></div><div><label for="num2">الرقم الثاني</label><input id="num2" type="number" inputmode="decimal" placeholder="مثال: 25"></div></div><label for="operation">العملية</label><select id="operation"><option value="+">جمع (+)</option><option value="-">طرح (−)</option><option value="*">ضرب (×)</option><option value="/">قسمة (÷)</option></select><button onclick="calculate()">احسب</button><div id="calcResult" class="result">ستظهر النتيجة هنا.</div></article>
+<article class="card"><h3>محوّل وحدات الطول</h3><p class="desc">حوّل بين المليمتر والسنتيمتر والمتر والكيلومتر.</p><label for="unitValue">القيمة</label><input id="unitValue" type="number" value="1" inputmode="decimal"><div class="row"><div><label for="fromUnit">من</label><select id="fromUnit"><option value="m">متر</option><option value="km">كيلومتر</option><option value="cm">سنتيمتر</option><option value="mm">مليمتر</option></select></div><div><label for="toUnit">إلى</label><select id="toUnit"><option value="cm">سنتيمتر</option><option value="m">متر</option><option value="km">كيلومتر</option><option value="mm">مليمتر</option></select></div></div><button onclick="convertUnits()">حوّل</button><div id="unitResult" class="result">1 متر = 100 سنتيمتر</div></article>
+<article class="card"><h3>حاسبة الخصم</h3><p class="desc">اعرف السعر بعد الخصم والمبلغ الذي وفرته.</p><label for="price">السعر الأصلي</label><input id="price" type="number" min="0" placeholder="مثال: 100"><label for="discount">نسبة الخصم %</label><input id="discount" type="number" min="0" max="100" placeholder="مثال: 15"><button onclick="calcDiscount()">احسب السعر</button><div id="discountResult" class="result">ستظهر النتيجة هنا.</div></article>
+</div></section>
+<section id="ai" style="margin-top:30px">
+<div class="sectionhead"><h2>✨ مساعدات الذكاء الاصطناعي</h2><p class="muted">قوالب طلبات جاهزة يمكنك نسخها واستخدامها في أداة ذكاء اصطناعي.</p></div>
+<div class="grid">
+<article class="card"><h3>مولّد طلب كتابة</h3><p class="desc">اكتب الموضوع واختر النبرة، ثم انسخ الطلب إلى مساعد الذكاء الاصطناعي الذي تستخدمه.</p><label for="promptTopic">ما الذي تريد كتابته؟</label><input id="promptTopic" placeholder="مثال: منشور عن متجر ملابس"><label for="promptTone">النبرة</label><select id="promptTone"><option>احترافية</option><option>ودية</option><option>تسويقية</option><option>مختصرة ومباشرة</option></select><button onclick="makePrompt()">إنشاء الطلب</button><div id="promptResult" class="result">سيظهر الطلب هنا.</div><button class="secondary" onclick="copyPrompt()">نسخ الطلب</button><p class="small">هذه الأداة لا ترسل بيانات إلى ChatGPT أو أي خدمة؛ هي تنشئ نص الطلب فقط.</p></article>
+<article class="card"><h3>كيف نجعل الذكاء الاصطناعي يعمل داخل الموقع؟</h3><p class="desc">المرحلة التالية يمكن أن تتضمن كتابة أو تلخيصًا آليًا داخل الصفحة.</p><ul><li>اختيار مزود API مناسب.</li><li>إنشاء خادم صغير لحماية مفتاح API.</li><li>مراجعة التكلفة وشروط الاستخدام قبل النشر.</li></ul><div class="result">لا تضع مفاتيح API السرية داخل ملف HTML العام؛ يمكن للزوار رؤيتها.</div></article>
+</div></section>
+</main>
+<footer>© <span id="year"></span> أدواتي الذكية — نموذج أولي تعليمي مجاني.</footer>
+<script>
+const $=id=>document.getElementById(id);
+function fmt(n){return new Intl.NumberFormat('ar',{maximumFractionDigits:6}).format(n)}
+function countText(){const t=$('textInput').value;const words=t.trim()?t.trim().split(/\s+/u).length:0;const chars=[...t.replace(/\s/gu,'')].length;$('textResult').textContent=`الكلمات: ${words} | الحروف دون المسافات: ${chars} | الأحرف مع المسافات: ${[...t].length}`;}
+function cleanText(){const t=$('cleanInput').value.replace(/[ \t]+/g,' ').replace(/\n[ \t]*\n(?:[ \t]*\n)+/g,'\n\n').trim();$('cleanResult').textContent=t||'لا يوجد نص بعد التنسيق.';}
+async function copyText(t){try{await navigator.clipboard.writeText(t);return true}catch(e){return false}}
+async function copyClean(){const t=$('cleanResult').textContent;if(!t||t==='ستظهر النتيجة هنا.')return;const ok=await copyText(t);if(!ok)alert('تعذر النسخ تلقائيًا. حدّد النص وانسخه يدويًا.')}
+function calculate(){const a=$('num1').value,b=$('num2').value,op=$('operation').value;if(a.trim()===''||b.trim()===''){$('calcResult').textContent='أدخل الرقمين أولًا.';return}const x=Number(a),y=Number(b);if(op==='/'&&y===0){$('calcResult').textContent='لا يمكن القسمة على صفر.';return}const r=op==='+'?x+y:op==='-'?x-y:op==='*'?x*y:x/y;$('calcResult').textContent='النتيجة: '+fmt(r)}
+const factors={mm:.001,cm:.01,m:1,km:1000},names={mm:'مليمتر',cm:'سنتيمتر',m:'متر',km:'كيلومتر'};
+function convertUnits(){const v=$('unitValue').value;if(v.trim()===''){$('unitResult').textContent='أدخل قيمة للتحويل.';return}const f=$('fromUnit').value,t=$('toUnit').value;$('unitResult').textContent=`${fmt(Number(v))} ${names[f]} = ${fmt(Number(v)*factors[f]/factors[t])} ${names[t]}`}
+function calcDiscount(){const p=$('price').value,d=$('discount').value;if(p.trim()===''||d.trim()===''){$('discountResult').textContent='أدخل السعر ونسبة الخصم.';return}const price=Number(p),disc=Number(d);if(price<0||disc<0||disc>100){$('discountResult').textContent='أدخل سعرًا غير سالب وخصمًا بين 0 و100.';return}$('discountResult').textContent=`السعر بعد الخصم: ${fmt(price*(1-disc/100))} | التوفير: ${fmt(price*disc/100)}`}
+function makePrompt(){const topic=$('promptTopic').value.trim();if(!topic){$('promptResult').textContent='اكتب الموضوع أولًا.';return}$('promptResult').textContent=`اكتب نصًا باللغة العربية عن: ${topic}. استخدم نبرة ${$('promptTone').value}، واجعل النص واضحًا ومفيدًا للجمهور المستهدف. اقترح عنوانًا مناسبًا، ونظّم المحتوى في فقرات قصيرة، وتجنب اختلاق الحقائق.`}
+async function copyPrompt(){const t=$('promptResult').textContent;if(!t||t==='سيظهر الطلب هنا.')return;const ok=await copyText(t);if(!ok)alert('تعذر النسخ تلقائيًا. حدّد النص وانسخه يدويًا.')}
+let loadedImage=null, originalFile=null, generatedUrl=null;
+$('imgQuality').addEventListener('input',()=> $('qualityLabel').textContent=$('imgQuality').value+'%');
+$('imageFile').addEventListener('change',()=>{
+ const file=$('imageFile').files[0];if(!file)return;
+ if(!file.type.startsWith('image/')){$('imageInfo').textContent='الرجاء اختيار ملف صورة.';return}
+ originalFile=file;const url=URL.createObjectURL(file);const img=new Image();
+ img.onload=()=>{loadedImage=img;$('imageOptions').hidden=false;$('imgWidth').value=img.naturalWidth;$('imageInfo').textContent=`الأبعاد: ${img.naturalWidth} × ${img.naturalHeight} بكسل | الحجم الأصلي: ${(file.size/1024).toFixed(1)} كيلوبايت`;URL.revokeObjectURL(url);$('imageResult').textContent='اضغط «معالجة الصورة» لإنشاء نسخة جديدة.'};
+ img.onerror=()=>{$('imageInfo').textContent='تعذر فتح الصورة.';URL.revokeObjectURL(url)};img.src=url;
+});
+function processImage(){if(!loadedImage||!originalFile){$('imageResult').textContent='اختر صورة أولًا.';return}let w=Number($('imgWidth').value);if(!Number.isFinite(w)||w<1){$('imageResult').textContent='أدخل عرضًا صحيحًا.';return}w=Math.min(6000,Math.round(w));const ratio=loadedImage.naturalHeight/loadedImage.naturalWidth;const h=Math.max(1,Math.round(w*ratio));const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;const ctx=canvas.getContext('2d');if(!ctx){$('imageResult').textContent='المتصفح لا يدعم معالجة الصورة.';return}ctx.drawImage(loadedImage,0,0,w,h);const type=$('imgFormat').value;const quality=Number($('imgQuality').value)/100;canvas.toBlob(blob=>{if(!blob){$('imageResult').textContent='تعذر إنشاء الصورة. جرّب صيغة أخرى.';return}if(generatedUrl)URL.revokeObjectURL(generatedUrl);generatedUrl=URL.createObjectURL(blob);$('preview').src=generatedUrl;$('preview').hidden=false;$('downloadImage').href=generatedUrl;$('downloadImage').download='adawati-image.'+(type==='image/jpeg'?'jpg':type==='image/png'?'png':'webp');$('downloadImage').hidden=false;$('imageResult').textContent=`تم إنشاء الصورة: ${w} × ${h} بكسل | الحجم الجديد: ${(blob.size/1024).toFixed(1)} كيلوبايت`;},type,type==='image/png'?undefined:quality)}
+$('year').textContent=new Date().getFullYear();
+</script></body></html>
